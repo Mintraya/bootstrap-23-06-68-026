@@ -1,143 +1,307 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thai-Austrian technical college</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="shotcut icon" href="img/logo.gif" type="image/x-icon">
-    <style>
-        @font-face{
-            font-family: 'Playpen_Sans_Thai';
-            src:url(Playpen_Sans_Thai/PlaypenSansThai-VariableFont_wght.ttf) format('truetype')
-        }
-        body{
-            background: lightgray;
-            font-family: 'Playpen_Sans_Thai';
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thai-Austrian technical college</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="shotcut icon" href="img/logo.gif" type="image/x-icon">
+  <style>
+    @font-face {
+      font-family: 'Playpen_Sans_Thai';
+      src: url(Playpen_Sans_Thai/PlaypenSansThai-VariableFont_wght.ttf) format('truetype')
+    }
+
+    body {
+      background: lightgray;
+      font-family: 'Playpen_Sans_Thai';
+    }
+  </style>
 </head>
+
 <body>
-<!-- navbar    -->
-<nav class="navbar navbar-expand-lg " data-bs-theme="dark" style="background: #336699;">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">
-        <img src="img/logo.gif" width="30" class="me-3">  Thai-Austrian
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">สมาชิก</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            ข้อมูลเพิ่มเติม
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">สมัครสมาชิก</a></li>
-            <li>
-                <hr class="dropdown-divider">
-            </li>
-            <li><a class="dropdown-item" href="#">หน้าหลัก</a></li>
-            <li><a class="dropdown-item" href="#">ค้นหาบทความ</a></li>
-            <li><a class="dropdown-item" href="#">อัลบั้มรูปภาพ</a></li>
-            <li><a class="dropdown-item" href="#">เพื่อนสมาชิก</a></li>
-          </ul>
-        </li>
-      </ul>
-      <ul class="navbar-nav">
-        <li class="nav-item">
-            <a href="" class="nav-link">
-                <img src="img/house-door-fill.svg" >
+  <!-- navbar    -->
+  <nav class="navbar navbar-expand-lg " data-bs-theme="dark" style="background: #336699;">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="img/logo.gif" width="30" class="me-3"> Thai-Austrian
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">สมาชิก</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              ข้อมูลเพิ่มเติม
             </a>
-        </li>
-        <li class="nav-item">
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#" data-bs-toggle="modal"
+                  data-bs-target="#createAccountModal">สมัครสมาชิก</a></li>
+              <li>
+                <hr class="dropdown-divider" aria-labelledby="infoDropdown">
+              </li>
+              <li><a class="dropdown-item" href="#">หน้าหลัก</a></li>
+              <li><a class="dropdown-item" href="#">ค้นหาบทความ</a></li>
+              <li><a class="dropdown-item" href="#">อัลบั้มรูปภาพ</a></li>
+              <li><a class="dropdown-item" href="#">เพื่อนสมาชิก</a></li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="navbar-nav">
+          <li class="nav-item">
             <a href="" class="nav-link">
-                เข้าสู่ระบบ
+              <img src="img/house-door-fill.svg">
             </a>
-        </li>
-      </ul>
+          </li>
+          <li class="nav-item">
+            <a href="" class="nav-link" data-bs-toggle="modal" data-bs-target="#loginModal">
+              เข้าสู่ระบบ
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
-  </div>
-</nav>
-<!-- slide show -->
-<div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+  </nav>
+  <!-- slide show -->
+  <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" 
-        aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" 
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
         aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" 
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
         aria-label="Slide 3"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" 
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
         aria-label="Slide 4"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" 
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
         aria-label="Slide 5"></button>
     </div>
 
     <div class="carousel-inner">
-    <div class="carousel-item active" data-bs-interval="1500">
-      <img src="img/1.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-item active" data-bs-interval="1500">
+        <img src="img/1.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item" data-bs-interval="3000">
+        <img src="img/2.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item" data-bs-interval="3000">
+        <img src="img/3.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item" data-bs-interval="3000">
+        <img src="img/4.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item" data-bs-interval="1500">
+        <img src="img/5.jpg" class="d-block w-100" alt="...">
+      </div>
     </div>
-    <div class="carousel-item" data-bs-interval="3000">
-      <img src="img/2.jpg" class="d-block w-100" alt="...">
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  <!-- แถบนำทาง -->
+  <div class="my-5 bg-secondary p-2">
+    <ul class="nav justify-content-center">
+      <li class="nav-item">
+        <a class="nav-link active btn btn-light me-3" aria-current="page" href="#">หน่วยงานการศึกษา</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active btn btn-light me-3" href="#">ฝ่ายบริหารทรัพยากร</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active btn btn-light me-3" href="#">ฝ่ายแผนงานและความร่วมมือ</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active btn btn-light me-3" aria-disabled="true">ฝ่ายวิชาการ</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active btn btn-light me-3" aria-disabled="true">ฝ่ายพัฒนากิจการนักเรียน นักศึกษา</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active btn btn-light me-3" aria-disabled="true">ITA/ข้อมูลสาธารณะ</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active btn btn-light me-3" aria-disabled="true">ลิงค์หน่วยงานภายนอก</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active btn btn-light me-3" aria-disabled="true">สมัครเรียน</a>
+      </li>
+    </ul>
+  </div>
+  <div class="row d-grid gap-3" style="grid-template-columns: 1fr 2fr 1fr;">
+    <div class="col bg-white text-center mb-3">
+      <div class=" bg-white p-3"></div>
+      <img src="img/logo.gif" width="200" class="img-thumbnail mt-5"><br>
+      วิทยาลัยเทคนิคสัตหีบ <br>
+      193 หมู่ 3 ตำบลนาจอมเทียน <br>
+      อำเภอสัตหีบ จังหวัดชลบุรี 20250 <br>
+      โทรศัพท์ 038-238398
+      <div class="bg-white p-3">
+        <img src="img/01.png" style="height: 100%;" class="img-fluid my-2">
+        <div class="bg-white p-3">
+          <img src="img/02.png" alt="" class="img-fluid my-2">
+        </div>
+      </div>
     </div>
-    <div class="carousel-item" data-bs-interval="3000">
-      <img src="img/3.jpg" class="d-block w-100" alt="...">
+    <br>
+    <div class="col bg-white">
+
     </div>
-    <div class="carousel-item" data-bs-interval="3000">
-      <img src="img/4.jpg" class="d-block w-100" alt="...">
-    </div>
-    <div class="carousel-item" data-bs-interval="1500">
-      <img src="img/5.jpg" class="d-block w-100" alt="...">
+    <div class="col bg-white">
+
     </div>
   </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
-<!-- แถบนำทาง -->
-<div class="my-5 bg-secondary p-2">
-    <ul class="nav justify-content-center">
-        <li class="nav-item">
-            <a class="nav-link active btn btn-light me-3" aria-current="page" href="#">หน่วยงานการศึกษา</a>
-        </li>
-        <li class="nav-item"> 
-            <a class="nav-link active btn btn-light me-3" href="#">ฝ่ายบริหารทรัพยากร</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link active btn btn-light me-3" href="#">ฝ่ายแผนงานและความร่วมมือ</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link active btn btn-light me-3" aria-disabled="true">ฝ่ายวิชาการ</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link active btn btn-light me-3" aria-disabled="true">ฝ่ายพัฒนากิจการนักเรียน นักศึกษา</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link active btn btn-light me-3" aria-disabled="true">ITA/ข้อมูลสาธารณะ</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link active btn btn-light me-3" aria-disabled="true">ลิงค์หน่วยงานภายนอก</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link active btn btn-light me-3" aria-disabled="true">สมัครเรียน</a>
-        </li>
-</ul>
-</div>
+
+  <script src="js/bootstrap.bundle.min.js"></script>
 
 
 
+  <!-- Modal -->
+  <div class="modal fade" id="createAccountModal" tabindex="-1" aria-labelledby="createAccountLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header" style="background-color: #ebebeb;">
+          <h5 class="modal-title w-100 text-center" id="createAccountLabel">Create Account</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <!-- ฟอร์มสมัครสมาชิก -->
+        <div class="modal-body">
+          <form>
+            <div class="row g-3">
+              <div class="col-md-6" style="color: #20c997;">
+                <label class="form-label">First name *</label>
+                <input type="text" class="form-control" placeholder="enter your first name">
+              </div>
+              <div class="col-md-6" style="color: #20c997;">
+                <label class="form-label">Last name *</label>
+                <input type="text" class="form-control" placeholder="enter your last name">
+              </div>
+              <div class="col-md-12" style="color: #20c997;">
+                <label class="form-label">Email*</label>
+                <input type="email" class="form-control" placeholder="enter your email">
+              </div>
+              <div class="col-md-6" style="color: #20c997;">
+                <label class="form-label">Password *</label>
+                <input type="password" class="form-control" placeholder="enter your password">
+              </div>
+              <div class="col-md-6" style="color: #20c997;">
+                <label class="form-label">Confirm Password *</label>
+                <input type="password" class="form-control" placeholder="enter your password again">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label" style="color: #20c997;">Gender:</label><br>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="gender" value="Male">
+                  <label class="form-check-label">Male</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="gender" value="Female">
+                  <label class="form-check-label">Female</label>
+                </div>
+              </div>
+              <!-- งานอดิเรก -->
+              <div class="col-md-6">
+                <label class="form-label" style="color: #20c997;">Hobbies:</label><br>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="checkbox"> Music
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="checkbox"> Sports
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="checkbox"> Travel
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="checkbox"> Movies
+                </div>
+              </div>
+              <!-- ตำแหน่งงาน -->
+              <div class="col-md-6">
+                <label class="form-label" style="color: #20c997;">Source of Income</label>
+                <select class="form-select">
+                  <option>Employed</option>
+                  <option>Student</option>
+                  <option>Self-employed</option>
+                </select>
+              </div>
+              <!-- เงินเดือน -->
+              <div class="col-md-6">
+                <label class="form-label" style="color: #20c997;">Income</label>
+                <div class="d-flex align-items-center">
+                  <input type="range" class="form-range flex-grow-1 me-2" style="max-width: 300px;" min="10000"
+                    max="100000" step="10000" id="incomeRange" oninput="updateIncomeValue(this.value)">
+                  <span class="input-group-text" id="incomeValue" style="background-color: #42eda6;">20K</span>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label" style="color: #20c997;">Upload Profile Picture</label>
+                <input type="file" class="form-control">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label" style="color: #20c997;">Age</label>
+                <input type="number" class="form-control" value="18">
+              </div>
+              <div class="col-md-12">
+                <label class="form-label" style="color: #20c997;">Bio</label>
+                <textarea class="form-control" rows="3"></textarea>
+              </div>
+            </div>
+            <div class="mt-4 text-end">
+              <button type="submit" class="btn btn-success px-4">Create</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    function updateIncomeValue(value) {
+      document.getElementById("incomeValue").innerText = value >= 1000 ? (value / 1000) + 'K' : value;
+    }
+  </script>
 
 
-    <script src="js/bootstrap.bundle.min.js"></script>
+
+  <!-- Modal -->
+  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header bg-primary text-white">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Login</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="row mb-3">
+              <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+              <div class="col-sm-10">
+                <input type="email" class="form-control" id="inputEmail3" placeholder="enter your email">
+              </div>
+            </div>
+            <div class="row mb-3">
+              <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+              <div class="col-sm-10">
+                <input type="password" class="form-control" id="inputPassword3" placeholder="enter your password ">
+              </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Login</button>
+          <button type="button" class="btn btn-secondary">Cancle</button>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
+
 </html>
